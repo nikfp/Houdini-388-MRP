@@ -1,21 +1,15 @@
 <script lang="ts">
-	import { ValidationMessage } from '@felte/reporter-svelte';
-
 	export let className = '';
 	export let name: string;
 	export let title: string;
+	export let number = 0;
 
 	$: componentClass = 'input ' + className;
 </script>
 
 <div class={componentClass}>
 	<label for={name}>{title}</label>
-	<input type="number" {name} id={name} />
-	<ValidationMessage for={name} let:messages={message}>
-		{#if message}
-			<span class="error-message">{message}</span>
-		{/if}
-	</ValidationMessage>
+	<input type="number" {name} id={name} bind:value={number} />
 </div>
 
 <style>

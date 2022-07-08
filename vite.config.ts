@@ -1,4 +1,3 @@
-import { defineConfig } from 'vitest/config';
 import { sveltekit } from '@sveltejs/kit/vite';
 import path from 'path';
 
@@ -7,7 +6,7 @@ const config = {
 	plugins: [sveltekit()],
 	resolve: {
 		alias: {
-			$houdini: path.resolve('.', '$houdini'),
+			$houdini: path.resolve('.', '$houdini', 'index.js'),
 			$graphql: path.resolve('src', 'lib', 'graphql-client')
 		}
 	},

@@ -1,5 +1,5 @@
 <script context="module" lang="ts">
-	import {GQL_HelloThere} from "$houdini"
+	import { GQL_HelloThere } from '$houdini';
 	import type { Load, LoadEvent } from '@sveltejs/kit';
 	import SendInputform from '../lib/SendInputform.svelte';
 
